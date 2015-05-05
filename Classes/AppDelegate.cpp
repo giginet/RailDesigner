@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "MainScene.h"
 
 USING_NS_CC;
 
@@ -34,7 +34,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("My Game");
+        glview = GLViewImpl::createWithRect("RailDesigner", Rect(0, 0, 320, 568));
         director->setOpenGLView(glview);
     }
 
@@ -45,9 +45,18 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     register_all_packages();
+    
+    // Resolution
+    auto fu = FileUtils::getInstance();
+    auto platform = Application::getInstance()->getTargetPlatform();
+    if (platform == Application::Platform::OS_MAC || platform == Application::Platform::OS_IPHONE) {
+        glview->setDesignResolutionSize(320, 568, ResolutionPolicy::SHOW_ALL);
+        fu->addSearchResolutionsOrder("images/retina");
+        director->setContentScaleFactor(2.0);
+    }
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = MainScene::createScene();
 
     // run
     director->runWithScene(scene);
