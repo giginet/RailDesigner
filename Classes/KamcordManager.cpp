@@ -3,7 +3,7 @@
 #include <jni.h>
 
 namespace platform {
-	#define CLASS_NAME "jp/co/translimit/casual/videorec/KamcordManager"
+	#define CLASS_NAME "org/kawaz/RailDesigner/videorec/KamcordManager"
 
     platform::KamcordManager::KamcordManager(){
     };
