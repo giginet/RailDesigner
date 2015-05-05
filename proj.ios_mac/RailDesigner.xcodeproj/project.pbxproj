@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -60,6 +60,24 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		84DFE2161AF8B5E2008D6FBA /* Kamcord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE2101AF8B5E2008D6FBA /* Kamcord.framework */; };
+		84DFE2171AF8B5E2008D6FBA /* Kamcord.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84DFE2121AF8B5E2008D6FBA /* Kamcord.bundle */; };
+		84DFE2181AF8B5E2008D6FBA /* KamcordiPad.storyboardc in Resources */ = {isa = PBXBuildFile; fileRef = 84DFE2131AF8B5E2008D6FBA /* KamcordiPad.storyboardc */; };
+		84DFE2191AF8B5E2008D6FBA /* KamcordiPhone.storyboardc in Resources */ = {isa = PBXBuildFile; fileRef = 84DFE2141AF8B5E2008D6FBA /* KamcordiPhone.storyboardc */; };
+		84DFE21A1AF8B5E2008D6FBA /* KC_GTMOAuth2ViewTouch.nib in Resources */ = {isa = PBXBuildFile; fileRef = 84DFE2151AF8B5E2008D6FBA /* KC_GTMOAuth2ViewTouch.nib */; };
+		84DFE21C1AF8B603008D6FBA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE21B1AF8B603008D6FBA /* CoreMedia.framework */; };
+		84DFE21E1AF8B64A008D6FBA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE21D1AF8B64A008D6FBA /* CoreText.framework */; };
+		84DFE2201AF8B652008D6FBA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE21F1AF8B652008D6FBA /* CoreVideo.framework */; };
+		84DFE2221AF8B65A008D6FBA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE2211AF8B65A008D6FBA /* MediaPlayer.framework */; };
+		84DFE2241AF8B662008D6FBA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE2231AF8B662008D6FBA /* MessageUI.framework */; };
+		84DFE2261AF8B66C008D6FBA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE2251AF8B66C008D6FBA /* SystemConfiguration.framework */; };
+		84DFE2281AF8B674008D6FBA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE2271AF8B674008D6FBA /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		84DFE22A1AF8B681008D6FBA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE2291AF8B681008D6FBA /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		84DFE22C1AF8B68A008D6FBA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE22B1AF8B68A008D6FBA /* CoreImage.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		84DFE22E1AF8B692008D6FBA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE22D1AF8B692008D6FBA /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		84DFE2301AF8B69A008D6FBA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE22F1AF8B69A008D6FBA /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		84DFE2371AF8BF18008D6FBA /* KamcordManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84DFE2351AF8BF18008D6FBA /* KamcordManager.mm */; };
+		84DFE23B1AF8C168008D6FBA /* sprite9.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DFE23A1AF8C168008D6FBA /* sprite9.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -152,6 +170,27 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84DFE2101AF8B5E2008D6FBA /* Kamcord.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kamcord.framework; sourceTree = "<group>"; };
+		84DFE2121AF8B5E2008D6FBA /* Kamcord.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Kamcord.bundle; sourceTree = "<group>"; };
+		84DFE2131AF8B5E2008D6FBA /* KamcordiPad.storyboardc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.storyboardc; path = KamcordiPad.storyboardc; sourceTree = "<group>"; };
+		84DFE2141AF8B5E2008D6FBA /* KamcordiPhone.storyboardc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.storyboardc; path = KamcordiPhone.storyboardc; sourceTree = "<group>"; };
+		84DFE2151AF8B5E2008D6FBA /* KC_GTMOAuth2ViewTouch.nib */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = KC_GTMOAuth2ViewTouch.nib; sourceTree = "<group>"; };
+		84DFE21B1AF8B603008D6FBA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE21D1AF8B64A008D6FBA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE21F1AF8B652008D6FBA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2211AF8B65A008D6FBA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2231AF8B662008D6FBA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2251AF8B66C008D6FBA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2271AF8B674008D6FBA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2291AF8B681008D6FBA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE22B1AF8B68A008D6FBA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE22D1AF8B692008D6FBA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE22F1AF8B69A008D6FBA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Twitter.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2311AF8B6A9008D6FBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2331AF8BF18008D6FBA /* KamcordManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KamcordManager.cpp; sourceTree = "<group>"; };
+		84DFE2341AF8BF18008D6FBA /* KamcordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KamcordManager.h; sourceTree = "<group>"; };
+		84DFE2351AF8BF18008D6FBA /* KamcordManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KamcordManager.mm; sourceTree = "<group>"; };
+		84DFE23A1AF8C168008D6FBA /* sprite9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sprite9.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -166,12 +205,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DFE2301AF8B69A008D6FBA /* Twitter.framework in Frameworks */,
+				84DFE22E1AF8B692008D6FBA /* Social.framework in Frameworks */,
+				84DFE22C1AF8B68A008D6FBA /* CoreImage.framework in Frameworks */,
+				84DFE22A1AF8B681008D6FBA /* AdSupport.framework in Frameworks */,
+				84DFE2281AF8B674008D6FBA /* Accounts.framework in Frameworks */,
+				84DFE2261AF8B66C008D6FBA /* SystemConfiguration.framework in Frameworks */,
+				84DFE2241AF8B662008D6FBA /* MessageUI.framework in Frameworks */,
+				84DFE2221AF8B65A008D6FBA /* MediaPlayer.framework in Frameworks */,
+				84DFE2201AF8B652008D6FBA /* CoreVideo.framework in Frameworks */,
+				84DFE21E1AF8B64A008D6FBA /* CoreText.framework in Frameworks */,
+				84DFE21C1AF8B603008D6FBA /* CoreMedia.framework in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				84DFE2161AF8B5E2008D6FBA /* Kamcord.framework in Frameworks */,
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
@@ -252,6 +303,19 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84DFE2311AF8B6A9008D6FBA /* Foundation.framework */,
+				84DFE22F1AF8B69A008D6FBA /* Twitter.framework */,
+				84DFE22D1AF8B692008D6FBA /* Social.framework */,
+				84DFE22B1AF8B68A008D6FBA /* CoreImage.framework */,
+				84DFE2291AF8B681008D6FBA /* AdSupport.framework */,
+				84DFE2271AF8B674008D6FBA /* Accounts.framework */,
+				84DFE2251AF8B66C008D6FBA /* SystemConfiguration.framework */,
+				84DFE2231AF8B662008D6FBA /* MessageUI.framework */,
+				84DFE2211AF8B65A008D6FBA /* MediaPlayer.framework */,
+				84DFE21F1AF8B652008D6FBA /* CoreVideo.framework */,
+				84DFE21D1AF8B64A008D6FBA /* CoreText.framework */,
+				84DFE21B1AF8B603008D6FBA /* CoreMedia.framework */,
+				84DFE20F1AF8B5E2008D6FBA /* Kamcord.embeddedframework */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
 				52B47A461A53D09B004E4C60 /* Security.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
@@ -281,6 +345,7 @@
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
+				84DFE23A1AF8C168008D6FBA /* sprite9.png */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -293,6 +358,9 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				84DFE2331AF8BF18008D6FBA /* KamcordManager.cpp */,
+				84DFE2341AF8BF18008D6FBA /* KamcordManager.h */,
+				84DFE2351AF8BF18008D6FBA /* KamcordManager.mm */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -345,6 +413,26 @@
 			path = ios;
 			sourceTree = SOURCE_ROOT;
 		};
+		84DFE20F1AF8B5E2008D6FBA /* Kamcord.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				84DFE2101AF8B5E2008D6FBA /* Kamcord.framework */,
+				84DFE2111AF8B5E2008D6FBA /* Resources */,
+			);
+			path = Kamcord.embeddedframework;
+			sourceTree = "<group>";
+		};
+		84DFE2111AF8B5E2008D6FBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84DFE2121AF8B5E2008D6FBA /* Kamcord.bundle */,
+				84DFE2131AF8B5E2008D6FBA /* KamcordiPad.storyboardc */,
+				84DFE2141AF8B5E2008D6FBA /* KamcordiPhone.storyboardc */,
+				84DFE2151AF8B5E2008D6FBA /* KC_GTMOAuth2ViewTouch.nib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,7 +481,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = MDDB52YB8L;
+						DevelopmentTeam = 338F4X26YY;
 					};
 				};
 			};
@@ -451,12 +539,15 @@
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
+				84DFE2181AF8B5E2008D6FBA /* KamcordiPad.storyboardc in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				84DFE2191AF8B5E2008D6FBA /* KamcordiPhone.storyboardc in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				84DFE23B1AF8C168008D6FBA /* sprite9.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -468,6 +559,8 @@
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				84DFE2171AF8B5E2008D6FBA /* Kamcord.bundle in Resources */,
+				84DFE21A1AF8B5E2008D6FBA /* KC_GTMOAuth2ViewTouch.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +589,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				84DFE2371AF8BF18008D6FBA /* KamcordManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +625,10 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kamcord.embeddedframework",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -567,6 +665,10 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Kamcord.embeddedframework",
+				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;

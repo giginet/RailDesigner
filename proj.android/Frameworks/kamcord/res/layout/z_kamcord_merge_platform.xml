@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout style="@style/KamcordProfileSettingsItemContainer" >
+
+        <ImageView
+            android:id="@+id/icon"
+            style="@style/KamcordProfileSettingsItemIcon" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/network_name"
+                style="@style/KamcordProfileSettingsNetworkText" />
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/KamcordProfileSettingsUsernameText" />
+        </LinearLayout>
+
+        <ToggleButton
+            android:id="@+id/sign_out"
+            style="@style/KamcordButton.Small"
+            android:textOn="@string/kamcordSignIn"
+            android:textOff="@string/kamcordSignOut" />
+    </LinearLayout>
+
+    <View style="@style/KamcordProfileSettingsDivider" />
+
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="kamcordPostButtonText">16sp</dimen>
+    <dimen name="kamcordEditVideoWidth">175dp</dimen>
+    <dimen name="kamcordProfileSettingsSmallTextsize">10dp</dimen>
+</resources>

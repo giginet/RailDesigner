@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:baselineAligned="false" >
+
+        <TextView
+            android:id="@+id/profileLetter"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/kamcord_profile_letter_background"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/notifText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="top"
+            android:paddingTop="0dp"
+            android:background="@null"
+            android:gravity="left|top"
+            android:textColor="#394a4e"
+            android:textSize="16sp" />
+
+        <com.kamcord.android.ui.views.RoundedImageView
+            android:id="@+id/notifThumbnail"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            custom:riv_corner_radius="2dp"
+            custom:riv_maintain_aspect="false" />
+
+        <TextView
+            android:id="@+id/notifTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:gravity="center|right"
+            android:textColor="#394a4e"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#aaa" />
+
+</RelativeLayout>

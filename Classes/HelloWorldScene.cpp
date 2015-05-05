@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "KamcordManager.h"
 
 USING_NS_CC;
 
@@ -29,6 +30,46 @@ bool HelloWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+
+
+    platform::KamcordManager::getInstance()->setup("zXLjTkAmWPQ7k0HUcQxKCUBkxqUJPXnwHW3xQZtn0L5",
+                                                   "4nNzlb2h4OLJbC5MoZ1hV1a9YIaLGhxFuUnJsdS92wx",
+                                                   "RailDesigner");
+
+
+    auto startButton = ui::Button::create("sprite9.png");
+    startButton->setScale9Enabled(true);
+    startButton->setContentSize(cocos2d::Size(100, 100));
+    startButton->setPosition(Vec2(visibleSize.width * 0.3, visibleSize.height * 0.2));
+    startButton->setTitleText("start");
+    startButton->setTitleColor(Color3B::BLACK);
+    startButton->setTitleFontSize(20);
+    this->addChild(startButton, 2);
+
+    startButton->addTouchEventListener([this](Ref* pSender, ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            log("start");
+            platform::KamcordManager::getInstance()->startRecording();
+        }
+        return;
+    });
+
+    auto stopButton = ui::Button::create("sprite9.png");
+    stopButton->setScale9Enabled(true);
+    stopButton->setContentSize(cocos2d::Size(100, 100));
+    stopButton->setPosition(Vec2(visibleSize.width * 0.6, visibleSize.height * 0.2));
+    stopButton->setTitleText("stop");
+    stopButton->setTitleColor(Color3B::BLACK);
+    stopButton->setTitleFontSize(20);
+    this->addChild(stopButton, 2);
+
+    stopButton->addTouchEventListener([this](Ref* pSender, ui::Widget::TouchEventType type){
+        if (type == ui::Widget::TouchEventType::ENDED) {
+            log("stop");
+            platform::KamcordManager::getInstance()->stopRecording();
+        }
+        return;
+    });
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program

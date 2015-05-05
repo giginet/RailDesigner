@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/video_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="#000"
+            android:textSize="22sp" />
+
+        <com.kamcord.android.ui.views.LikeUnlikeButton
+            android:id="@+id/likeUnlike"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/kamcord_like_button_background"
+            android:drawableLeft="@drawable/kamcord_like_button_icon"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/kamcord_like_button_text_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/views"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/kamcord_count_background"
+            android:drawableLeft="@drawable/kamcord_views_gray"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#7c8486"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_below="@id/title"
+            android:layout_toLeftOf="@id/views"
+            android:background="@drawable/kamcord_count_background"
+            android:drawableLeft="@drawable/kamcord_comments_gray"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="#7c8486"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee" />
+
+    <RelativeLayout
+        android:id="@+id/author_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" >
+
+        <TextView
+            android:id="@+id/profileLetter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/kamcord_profile_letter_background"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/profileLetter"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/profileLetter"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/followersCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/profileLetter"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/profileLetter"
+            android:textColor="#777"
+            android:textSize="16sp" />
+
+        <com.kamcord.android.ui.views.FollowUnfollowButton
+            android:id="@+id/followUnfollow"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/profileLetter"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/profileLetter"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/kamcord_like_button_background"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/kamcord_like_button_text_color"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee" />
+
+    <RelativeLayout
+        android:id="@+id/comment_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:background="#fff" >
+
+        <TextView
+            android:id="@+id/commentsString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:text="@string/kamcordComments"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/commentsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/commentsString"
+            android:layout_alignTop="@id/commentsString"
+            android:layout_toRightOf="@id/commentsString"
+            android:textColor="#777"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/commentsString"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp" >
+
+            <EditText
+                android:id="@+id/addComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#f4f4f4"
+                android:gravity="center|left"
+                android:hint="@string/kamcordAddComment"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="3"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/postComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/kamcord_button_background"
+                android:maxLines="1"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:singleLine="true"
+                android:text="@string/kamcordPost"
+                android:textColor="@color/kamcordButtonTextColor"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

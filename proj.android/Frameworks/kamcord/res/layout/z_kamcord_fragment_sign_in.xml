@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kamcordActivityBackground" >
+    
+    <include layout="@layout/z_kamcord_fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <LinearLayout
+        android:id="@+id/inputFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="10dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/kamcordChangeCredsPadding"
+        android:paddingRight="@dimen/kamcordChangeCredsPadding" >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/kamcordUsernameEmail"
+            android:imeOptions="actionNext"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:padding="@dimen/kamcordChangeCredsPadding"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textCursorDrawable="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/kamcordDividerWidth"
+            android:background="@color/kamcordDividerColor" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/kamcordPassword"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="@dimen/kamcordChangeCredsPadding"
+            android:textColor="#000"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signIn"
+        android:layout_below="@id/inputFields"
+        android:layout_centerHorizontal="true"
+        android:text="@string/kamcordSignIn"
+        style="@style/KamcordButton" />
+
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signIn"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|top"
+        android:paddingTop="@dimen/kamcordChangeCredsPadding"
+        android:text="@string/kamcordForgotYourPassword"
+        android:textColor="@color/kamcordTextColor" />
+
+    <View
+        android:id="@+id/headerDropShadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/kamcord_drop_shadow_bottom" />
+    
+</RelativeLayout>

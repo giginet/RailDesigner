@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <View 
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eee"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:textSize="20sp" />
+    
+    <TextView
+        android:id="@+id/postTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/author"
+        android:layout_alignBaseline="@id/author"
+        android:layout_alignBottom="@id/author"
+        android:layout_alignTop="@id/author"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#cecece" />
+
+    <Button
+        android:id="@+id/deleteComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/author"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/author"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/kamcord_toggle_selector"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/kamcordDelete"
+        android:textColor="@color/kamcordButtonTextColor"
+        android:textSize="@dimen/kamcordDeleteCommentText"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/commentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/author"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:textSize="16sp"
+        android:textColor="#868788" />
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@id/commentText"
+        android:background="@null" />
+    
+</RelativeLayout>

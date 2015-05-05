@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kamcordActivityBackground" >
+
+    <include layout="@layout/z_kamcord_fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:fillViewport="true" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/kamcordProfileSettingsSpacing" >
+
+            <LinearLayout
+                android:id="@+id/settings_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/kamcordProfileSettingsSpacing"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <!-- Edit Profile -->
+
+                <LinearLayout
+                    android:id="@+id/editProfileLayout"
+                    style="@style/KamcordProfileSettingsItemContainer" >
+
+                    <TextView
+                        style="@style/KamcordProfileSettingsItemText"
+                        android:text="@string/kamcordEditProfile" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/kamcordProfileSettingsNextIconHeight"
+                        android:layout_marginLeft="@dimen/kamcordProfileSettingsSpacing"
+                        android:src="@drawable/kamcord_player_next_icon" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/firstDivider"
+                    style="@style/KamcordProfileSettingsDivider" />
+
+            </LinearLayout>
+
+            <!-- Voice Overlay -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/kamcordProfileSettingsSpacing" >
+
+                <LinearLayout 
+                    android:id="@+id/voice_overlay_container"
+                    style="@style/KamcordProfileSettingsItemContainer" >
+
+                    <ImageView
+                        android:src="@drawable/kamcord_mic"
+                        style="@style/KamcordProfileSettingsItemIcon" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:text="@string/kamcordVoiceOverlay"
+                            style="@style/KamcordProfileSettingsNetworkText" />
+
+                        <TextView
+                            android:id="@+id/voice_overlay_status_text"
+                            style="@style/KamcordProfileSettingsUsernameText" />
+                    </LinearLayout>
+
+                    <ToggleButton
+                        android:id="@+id/voice_overlay_button"
+                        style="@style/KamcordButton.Small"
+                        android:textOn="@string/kamcordEnable"
+                        android:textOff="@string/kamcordDisable" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <!-- Terms of Service and Privacy Policy -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/termsOfServiceLayout"
+                    style="@style/KamcordProfileSettingsItemContainer" >
+
+                    <TextView
+                        style="@style/KamcordProfileSettingsItemText"
+                        android:text="@string/kamcordTermsOfService" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/kamcordProfileSettingsNextIconHeight"
+                        android:layout_marginLeft="@dimen/kamcordProfileSettingsSpacing"
+                        android:src="@drawable/kamcord_player_next_icon" />
+                </LinearLayout>
+
+                <View style="@style/KamcordProfileSettingsDivider" />
+
+                <LinearLayout
+                    android:id="@+id/privacyPolicyLayout"
+                    style="@style/KamcordProfileSettingsItemContainer" >
+
+                    <TextView
+                        style="@style/KamcordProfileSettingsItemText"
+                        android:text="@string/kamcordPrivacyPolicy" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/kamcordProfileSettingsNextIconHeight"
+                        android:layout_marginLeft="@dimen/kamcordProfileSettingsSpacing"
+                        android:src="@drawable/kamcord_player_next_icon" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/headerDropShadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/kamcord_drop_shadow_bottom" />
+
+</RelativeLayout>
