@@ -15,10 +15,10 @@
     
     <application android:label="@string/app_name"
                  android:icon="@drawable/icon">
-					 
+
         <!-- Tell Cocos2dxActivity the name of our .so -->
         <meta-data android:name="android.app.lib_name"
-	              android:value="cocos2dcpp" />
+                  android:value="cocos2dcpp" />
 
         <activity android:name="org.cocos2dx.cpp.AppActivity"
                   android:label="@string/app_name"
@@ -33,42 +33,42 @@
         </activity>
         
         <activity
-		    android:name="com.kamcord.android.ui.KamcordActivity"
-		    android:launchMode="singleTask"
-		    android:configChanges="keyboardHidden|keyboard"
-		    android:windowSoftInputMode="stateHidden|adjustPan"
-		    android:windowActionBar="false"
-		    android:theme="@style/KamcordTheme"
-		    android:hardwareAccelerated="true">
-		</activity>
+            android:name="com.kamcord.android.ui.KamcordActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|keyboard"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:windowActionBar="false"
+            android:theme="@style/KamcordTheme"
+            android:hardwareAccelerated="true">
+        </activity>
 
-		<activity
-   	 		android:name="com.kamcord.android.ui.ReplayActivity"
-   		 	android:label="Watch"
-    		android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-    		android:launchMode="singleTask"
-    		android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
-    		android:configChanges="orientation|screenSize|keyboardHidden"
-    		android:hardwareAccelerated="true" >
-    		<meta-data
-        		android:name="android.support.PARENT_ACTIVITY"
-        		android:value="com.kamcord.android.ui.KamcordActivity" />
-		</activity>
+        <activity
+            android:name="com.kamcord.android.ui.ReplayActivity"
+            android:label="Watch"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamcord.android.ui.KamcordActivity" />
+        </activity>
 
-		<activity
-    		android:name="com.kamcord.android.ui.WebActivity"
-    		android:label="Login"
-    		android:theme="@style/KamcordLoginTheme"
-    		android:launchMode="singleTask"
-    		android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
-    		android:configChanges="orientation|screenSize|keyboardHidden" >
-    		<meta-data
-        		android:name="android.support.PARENT_ACTIVITY"
-        		android:value="com.kamcord.android.ui.KamcordActivity" />
-		</activity>
+        <activity
+            android:name="com.kamcord.android.ui.WebActivity"
+            android:label="Login"
+            android:theme="@style/KamcordLoginTheme"
+            android:launchMode="singleTask"
+            android:parentActivityName="com.kamcord.android.ui.KamcordActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kamcord.android.ui.KamcordActivity" />
+        </activity>
 
-		<service android:name="com.kamcord.android.UploadService" />
-        
+        <service android:name="com.kamcord.android.UploadService" />
+
     </application>
 
     <supports-screens android:anyDensity="true"

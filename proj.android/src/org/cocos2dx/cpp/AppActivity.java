@@ -31,15 +31,15 @@ import android.os.Bundle;
 import com.kamcord.android.Kamcord;
 
 public class AppActivity extends Cocos2dxActivity {
-	static AppActivity activity = null;
+    static AppActivity activity = null;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
-	    activity = this;
-	}
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        activity = this;
+    }
 
-	public static AppActivity getActivity() {
-		return activity;
-	}
+    public static AppActivity getActivity() {
+        return activity;
+    }
 }

@@ -22,32 +22,32 @@ namespace platform {
     	cocos2d::JniMethodInfo t;
     	if (cocos2d::JniHelper::getStaticMethodInfo(t, CLASS_NAME, "setup", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V")) {
 
-    		// string生成
-    		jstring jkey = t.env->NewStringUTF(key.c_str());
-    		jstring jsecret = t.env->NewStringUTF(secret.c_str());
-    		jstring jappName = t.env->NewStringUTF(appName.c_str());
+            // string生成
+            jstring jkey = t.env->NewStringUTF(key.c_str());
+            jstring jsecret = t.env->NewStringUTF(secret.c_str());
+            jstring jappName = t.env->NewStringUTF(appName.c_str());
 
-    		t.env->CallStaticVoidMethod(t.classID, t.methodID, jkey, jsecret, jappName);
-    	    t.env->DeleteLocalRef(t.classID);
-    	}
+            t.env->CallStaticVoidMethod(t.classID, t.methodID, jkey, jsecret, jappName);
+            t.env->DeleteLocalRef(t.classID);
+        }
     }
 
     void KamcordManager::startRecording()
     {
-    	cocos2d::JniMethodInfo t;
-    	if (cocos2d::JniHelper::getStaticMethodInfo(t, CLASS_NAME, "startRecording", "()V")) {
-    		t.env->CallStaticVoidMethod(t.classID, t.methodID);
-    	    t.env->DeleteLocalRef(t.classID);
-    	}
+        cocos2d::JniMethodInfo t;
+        if (cocos2d::JniHelper::getStaticMethodInfo(t, CLASS_NAME, "startRecording", "()V")) {
+            t.env->CallStaticVoidMethod(t.classID, t.methodID);
+            t.env->DeleteLocalRef(t.classID);
+        }
     }
 
     void KamcordManager::stopRecording()
     {
-    	cocos2d::JniMethodInfo t;
-    	if (cocos2d::JniHelper::getStaticMethodInfo(t, CLASS_NAME, "stopRecording", "()V")) {
-    		t.env->CallStaticVoidMethod(t.classID, t.methodID);
-    	    t.env->DeleteLocalRef(t.classID);
-    	}
+        cocos2d::JniMethodInfo t;
+        if (cocos2d::JniHelper::getStaticMethodInfo(t, CLASS_NAME, "stopRecording", "()V")) {
+            t.env->CallStaticVoidMethod(t.classID, t.methodID);
+            t.env->DeleteLocalRef(t.classID);
+        }
     }
 
     void KamcordManager::pauseRecording()
