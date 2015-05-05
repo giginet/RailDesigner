@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/kamcordTabbarBackground" >
+
+    <ImageView
+        android:id="@+id/tabbar_back"
+        android:layout_width="@dimen/kamcordTabbarHeight"
+        android:layout_height="@dimen/kamcordTabbarHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/kamcord_tabbar_back_selector"
+        android:padding="@dimen/kamcordTabbarBackPadding"
+        android:src="@drawable/kamcord_close_icon" />
+
+    <FrameLayout
+        android:id="@+id/tabbar_notifs_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/kamcordTabbarHeight"
+        android:minWidth="@dimen/kamcordTabbarHeight"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/kamcordTabbarBackPadding"
+        android:background="@drawable/kamcord_tabbar_back_selector" >
+
+        <TextView
+            android:id="@+id/tabbar_notifs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/kamcord_profile_letter_background"
+            android:gravity="center"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+        
+        <ImageView 
+            android:id="@+id/tabbar_zero_notifs"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:src="@drawable/kamcord_zero_notifs"
+            android:adjustViewBounds="true"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/tabbar_filter"
+        android:layout_width="@dimen/kamcordTabbarHeight"
+        android:layout_height="@dimen/kamcordTabbarHeight"
+        android:minWidth="@dimen/kamcordTabbarHeight"
+        android:layout_toLeftOf="@id/tabbar_notifs_container"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/kamcord_tabbar_back_selector"
+        android:padding="@dimen/kamcordTabbarBackPadding"
+        android:src="@drawable/kamcord_feed_filter" />
+
+    <ImageView
+        android:id="@+id/kamcord_header"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/kamcordTabbarHeight"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/tabbar_back"
+        android:src="@drawable/kamcord_tabbar_icon"
+        android:gravity="center"
+        android:paddingLeft="@dimen/kamcordTabbarBackPadding"
+        android:paddingRight="@dimen/kamcordTabbarBackPadding" />
+
+    <LinearLayout
+        android:id="@+id/tabbar_items"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/kamcordTabbarHeight"
+        android:layout_toLeftOf="@id/tabbar_filter"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/kamcord_header"
+        android:background="@color/kamcordTabbarBackground"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

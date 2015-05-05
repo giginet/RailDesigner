@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kamcordActivityBackground" >
+
+    <include layout="@layout/z_kamcord_fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <com.kamcord.android.ui.views.PullToRefreshGridView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:paddingBottom="@dimen/kamcordWatchPadding"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="1" />
+
+    <View
+        android:id="@+id/headerDropShadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/kamcord_drop_shadow_bottom" />
+
+</RelativeLayout>

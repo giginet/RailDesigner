@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:clickable="true" >
+    
+    <ImageView 
+        android:id="@+id/header_back"
+        android:layout_width="@dimen/kamcordTabbarHeight"
+        android:layout_height="@dimen/kamcordTabbarHeight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/kamcord_tabbar_back_selector"
+        android:padding="@dimen/kamcordTabbarBackPadding"
+        android:src="@drawable/kamcord_back_icon" />
+    
+    <TextView 
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/kamcordTabbarHeight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/kamcordTabbarTextColor"
+        android:textSize="24sp"
+        android:gravity="center" />
+
+</RelativeLayout>

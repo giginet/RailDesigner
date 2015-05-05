@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="kamcordShareThumbSize">125dp</dimen>
+    <dimen name="kamcordShareSpacing">13.3dp</dimen>
+    <dimen name="kamcordModalWidth">700dp</dimen>
+    <dimen name="kamcordModalHeight">400dp</dimen>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true" android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/kamcordShareWidgetBackgroundSelectedPressed" />
+            <corners android:bottomRightRadius="@dimen/kamcordShareCornerRadius" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/kamcordShareWidgetBackgroundSelected" />
+            <corners android:bottomRightRadius="@dimen/kamcordShareCornerRadius" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/kamcordShareWidgetBackgroundUnselectedPressed" />
+            <corners android:bottomRightRadius="@dimen/kamcordShareCornerRadius" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/kamcordShareWidgetBackgroundUnselected" />
+            <corners android:bottomRightRadius="@dimen/kamcordShareCornerRadius" />
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false" android:state_focused="true" android:drawable="@color/kamcordButtonInactiveFocused"></item>
+    <item android:state_pressed="true" android:drawable="@color/kamcordButtonInactivePressed"></item>
+    <item android:state_focused="true" android:drawable="@color/kamcordButtonInactiveFocused"></item>
+    <item android:state_enabled="false" android:drawable="@color/kamcordButtonInactive"></item>
+    <item android:drawable="@color/kamcordButtonInactive"></item>
+
+</selector>

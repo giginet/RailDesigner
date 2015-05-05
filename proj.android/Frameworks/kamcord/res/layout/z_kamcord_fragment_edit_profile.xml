@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kamcordActivityBackground"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/z_kamcord_fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/kamcordEditProfilePadding" >
+
+        <LinearLayout
+            android:id="@+id/changeEmailLayout"
+            style="@style/KamcordProfileSettingsItemContainer"
+            android:background="#fff" >
+
+            <TextView
+                style="@style/KamcordProfileSettingsItemText"
+                android:text="@string/kamcordChangeEmail" />
+
+            <ImageView
+                android:layout_width="@dimen/kamcordEditProfileNextIconWidth"
+                android:layout_height="@dimen/kamcordEditProfileNextIconHeight"
+                android:layout_marginLeft="@dimen/kamcordProfileSettingsSpacing"
+                android:background="@drawable/kamcord_player_next_icon" />
+        </LinearLayout>
+
+        <View style="@style/KamcordProfileSettingsDivider" />
+
+        <LinearLayout
+            android:id="@+id/changePasswordLayout"
+            style="@style/KamcordProfileSettingsItemContainer"
+            android:background="#fff" >
+
+            <TextView
+                style="@style/KamcordProfileSettingsItemText"
+                android:text="@string/kamcordChangePassword" />
+
+            <ImageView
+                android:layout_width="@dimen/kamcordEditProfileNextIconWidth"
+                android:layout_height="@dimen/kamcordEditProfileNextIconHeight"
+                android:layout_marginLeft="@dimen/kamcordProfileSettingsSpacing"
+                android:background="@drawable/kamcord_player_next_icon" />
+        </LinearLayout>
+
+        <View style="@style/KamcordProfileSettingsDivider" />
+
+        <LinearLayout
+            android:id="@+id/changeTaglineLayout"
+            style="@style/KamcordProfileSettingsItemContainer"
+            android:background="#fff" >
+
+            <TextView
+                style="@style/KamcordProfileSettingsItemText"
+                android:text="@string/kamcordChangeTagline" />
+
+            <ImageView
+                android:layout_width="@dimen/kamcordEditProfileNextIconWidth"
+                android:layout_height="@dimen/kamcordEditProfileNextIconHeight"
+                android:layout_marginLeft="@dimen/kamcordProfileSettingsSpacing"
+                android:background="@drawable/kamcord_player_next_icon" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <View
+        android:id="@+id/headerDropShadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/header"
+        android:background="@drawable/kamcord_drop_shadow_bottom" />
+    
+
+</RelativeLayout>

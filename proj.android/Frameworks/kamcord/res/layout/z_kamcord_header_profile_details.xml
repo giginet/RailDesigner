@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kamcord.android.ui.views.ProfileInfoHeader xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/userInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/profileLetter"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/kamcord_profile_letter_background"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/profileLetter"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@id/profileLetter"
+            android:textColor="#fff"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/profileSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:padding="16dp"
+            android:src="@drawable/kamcord_profile_settings"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/profileLetter"
+            android:layout_below="@id/username"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_toRightOf="@id/profileLetter"
+            android:gravity="left|top"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/taglineFade"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@id/tagline"
+            android:layout_alignLeft="@id/tagline"
+            android:layout_alignRight="@id/tagline"
+            android:background="@drawable/kamcord_profile_header_fade" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/userActionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/userInfoContainer"
+        android:orientation="horizontal" >
+        
+        <View
+            android:layout_width="64dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp" />
+
+        <com.kamcord.android.ui.views.FollowUnfollowButton
+            android:id="@+id/followUnfollow"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/kamcord_follow_button_background"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textColor="@color/kamcord_follow_button_text_color"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/countsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/userActionsContainer"
+        android:layout_marginTop="16dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/videosCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|bottom"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/videosText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:text="Videos"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/followersCountContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/followersCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|bottom"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/followersText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:text="Followers"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/followingCountContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/followingCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|bottom"
+                android:text="0"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/followingText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:text="@string/kamcordFollowing"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.kamcord.android.ui.views.ProfileInfoHeader>
