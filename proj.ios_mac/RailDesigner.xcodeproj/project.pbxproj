@@ -76,6 +76,7 @@
 		84DFE22C1AF8B68A008D6FBA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE22B1AF8B68A008D6FBA /* CoreImage.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		84DFE22E1AF8B692008D6FBA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE22D1AF8B692008D6FBA /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		84DFE2301AF8B69A008D6FBA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DFE22F1AF8B69A008D6FBA /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		84DFE2371AF8BF18008D6FBA /* KamcordManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84DFE2351AF8BF18008D6FBA /* KamcordManager.mm */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -185,6 +186,9 @@
 		84DFE22D1AF8B692008D6FBA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
 		84DFE22F1AF8B69A008D6FBA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Twitter.framework; sourceTree = DEVELOPER_DIR; };
 		84DFE2311AF8B6A9008D6FBA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		84DFE2331AF8BF18008D6FBA /* KamcordManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KamcordManager.cpp; sourceTree = "<group>"; };
+		84DFE2341AF8BF18008D6FBA /* KamcordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KamcordManager.h; sourceTree = "<group>"; };
+		84DFE2351AF8BF18008D6FBA /* KamcordManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KamcordManager.mm; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -351,6 +355,9 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				84DFE2331AF8BF18008D6FBA /* KamcordManager.cpp */,
+				84DFE2341AF8BF18008D6FBA /* KamcordManager.h */,
+				84DFE2351AF8BF18008D6FBA /* KamcordManager.mm */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -578,6 +585,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				84DFE2371AF8BF18008D6FBA /* KamcordManager.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
