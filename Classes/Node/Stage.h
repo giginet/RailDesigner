@@ -26,6 +26,8 @@ protected:
     virtual ~Stage();
     bool init() override;
 public:
+    
+    void update(float dt) override;
 
     /**
      指定グリッド位置にあるタイルを取り出します
@@ -41,6 +43,12 @@ public:
      * @param y y座標
      */
     void removeTileAt(int x, int y);
+    
+    /**
+     *  指定したタイルを取り除きます
+     *  @param tile 消すタイル
+     */
+    void removeTile(RailTile * tile);
     
     /**
      * タイルを追加します
@@ -63,9 +71,10 @@ public:
      *  @return タイル座標。もし、タイルが設置できない場所だった場合、(-1, -1)を返す
      */
     cocos2d::Vec2 convertToGridSpace(cocos2d::Vec2 worldSpace);
-
+    /// スクロール量
+    CC_SYNTHESIZE(float, _scroll, Scroll);
     /// タイル配置用のノード
-    CC_SYNTHESIZE(cocos2d::Node *, _tileNode, TileNode);
+    CC_SYNTHESIZE_RETAIN(cocos2d::Node *, _tileNode, TileNode);
     CREATE_FUNC(Stage);
 };
 

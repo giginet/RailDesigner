@@ -12,7 +12,8 @@
 USING_NS_CC;
 
 Stage::Stage()
-: _tileNode(nullptr)
+: _scroll(0)
+, _tileNode(nullptr)
 {
 }
 
@@ -49,7 +50,30 @@ bool Stage::init()
      }
      }*/
     
+    this->scheduleUpdate();
     return true;
+}
+
+void Stage::update(float dt)
+{
+    _scroll += 1;
+    _tileNode->setPositionY(-_scroll);
+    
+    // 画面外に消えたタイルを削除する
+    cocos2d::Vector<RailTile *> deletedTile;
+    
+    for (auto& tile : _tiles) {
+        auto nodePos = tile->getPosition();
+        auto worldPos = _tileNode->convertToWorldSpace(nodePos);
+        if (worldPos.y < -TILE_HEIGHT) {
+            deletedTile.pushBack(tile);
+        }
+    }
+    for (auto& tile : deletedTile) {
+        this->removeTile(tile);
+    }
+    deletedTile.clear();
+    
 }
 
 RailTile * Stage::getTileAt(int x, int y)
@@ -66,6 +90,11 @@ RailTile * Stage::getTileAt(int x, int y)
 void Stage::removeTileAt(int x, int y)
 {
     auto tile = this->getTileAt(x, y);
+    this->removeTile(tile);
+}
+
+void Stage::removeTile(RailTile *tile)
+{
     if (tile) {
         tile->removeFromParent();
         _tiles.eraseObject(tile);
@@ -77,7 +106,7 @@ void Stage::addTile(RailTile *tile)
     auto gp = tile->getGridPos();
     if (tile->isValid()) {
         _tiles.pushBack(tile);
-        this->addChild(tile);
+        _tileNode->addChild(tile);
         return;
     }
     assert("Grid point of the tile is invalid in Stage::addTile.");
@@ -90,7 +119,7 @@ bool Stage::isExistTile(int x, int y)
 
 cocos2d::Vec2 Stage::convertToGridSpace(cocos2d::Vec2 worldSpace)
 {
-    auto nodeSpace = this->convertToNodeSpace(worldSpace);
+    auto nodeSpace = _tileNode->convertToNodeSpace(worldSpace);
     auto gridY = floorf((nodeSpace.y + TILE_HEIGHT / 2.0) / TILE_HEIGHT);
     if (gridY >= 0) {
         for (int x = 0; x < 3; ++x) {
