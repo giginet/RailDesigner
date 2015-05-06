@@ -11,8 +11,8 @@
 		0720C14A1AF8B1E4002AE891 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0720C1471AF8B1E4002AE891 /* MainScene.cpp */; };
 		0720C1571AF8B370002AE891 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0720C1531AF8B370002AE891 /* Stage.cpp */; };
 		0720C1581AF8B370002AE891 /* Stage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0720C1531AF8B370002AE891 /* Stage.cpp */; };
-		0720C1591AF8B370002AE891 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0720C1551AF8B370002AE891 /* Tile.cpp */; };
-		0720C15A1AF8B370002AE891 /* Tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0720C1551AF8B370002AE891 /* Tile.cpp */; };
+		0720C1591AF8B370002AE891 /* RailTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0720C1551AF8B370002AE891 /* RailTile.cpp */; };
+		0720C15A1AF8B370002AE891 /* RailTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0720C1551AF8B370002AE891 /* RailTile.cpp */; };
 		077BD8431AFA202E00435C50 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 077BD8421AFA202E00435C50 /* images */; };
 		077BD8441AFA202E00435C50 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 077BD8421AFA202E00435C50 /* images */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
@@ -129,8 +129,8 @@
 		0720C1481AF8B1E4002AE891 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Scene/MainScene.h; sourceTree = "<group>"; };
 		0720C1531AF8B370002AE891 /* Stage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stage.cpp; sourceTree = "<group>"; };
 		0720C1541AF8B370002AE891 /* Stage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stage.h; sourceTree = "<group>"; };
-		0720C1551AF8B370002AE891 /* Tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tile.cpp; sourceTree = "<group>"; };
-		0720C1561AF8B370002AE891 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		0720C1551AF8B370002AE891 /* RailTile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RailTile.cpp; sourceTree = "<group>"; };
+		0720C1561AF8B370002AE891 /* RailTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RailTile.h; sourceTree = "<group>"; };
 		077BD8421AFA202E00435C50 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		077BD8451AFA25E000435C50 /* define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -286,8 +286,8 @@
 			children = (
 				0720C1531AF8B370002AE891 /* Stage.cpp */,
 				0720C1541AF8B370002AE891 /* Stage.h */,
-				0720C1551AF8B370002AE891 /* Tile.cpp */,
-				0720C1561AF8B370002AE891 /* Tile.h */,
+				0720C1551AF8B370002AE891 /* RailTile.cpp */,
+				0720C1561AF8B370002AE891 /* RailTile.h */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -635,7 +635,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				84DFE2371AF8BF18008D6FBA /* KamcordManager.mm in Sources */,
 				0720C1491AF8B1E4002AE891 /* MainScene.cpp in Sources */,
-				0720C1591AF8B370002AE891 /* Tile.cpp in Sources */,
+				0720C1591AF8B370002AE891 /* RailTile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,7 +647,7 @@
 				0720C14A1AF8B1E4002AE891 /* MainScene.cpp in Sources */,
 				0720C1581AF8B370002AE891 /* Stage.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				0720C15A1AF8B370002AE891 /* Tile.cpp in Sources */,
+				0720C15A1AF8B370002AE891 /* RailTile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,9 @@
 #define __RailDesigner__Stage__
 
 #include "cocos2d.h"
-#include "Tile.h"
+#include "RailTile.h"
 
-typedef cocos2d::Vector<Tile *> TileList;
+typedef cocos2d::Vector<RailTile *> TileList;
 
 /** ゲームステージ用のノードです
  *  画面をスクロールさせたり、特定のタイルを取り出したりします。
@@ -33,7 +33,7 @@ public:
      @param y y座標（自然数）
      @return タイル、見つからなかったらnullptr
      */
-    Tile * getTileAt(int x, int y);
+    RailTile * getTileAt(int x, int y);
     
     /** 
      * 指定位置にあるタイルを取り除きます
@@ -47,7 +47,22 @@ public:
      * Tile#_gridPosが不正な値の場合、assertを投げます
      * @param 追加するタイル
      */
-    void addTile(Tile * tile);
+    void addTile(RailTile * tile);
+    
+    /**
+     *  タイルが存在するかどうかを返します
+     *  @param x x座標
+     *  @param y y座標
+     *  @return タイルが存在するかどうか
+     */
+    bool isExistTile(int x, int y);
+    
+    /**
+     *  グローバル座標をグリッド座標に変換します
+     *  @param worldSpace グローバル座標
+     *  @return タイル座標。もし、タイルが設置できない場所だった場合、(-1, -1)を返す
+     */
+    cocos2d::Vec2 convertToGridSpace(cocos2d::Vec2 worldSpace);
 
     /// タイル配置用のノード
     CC_SYNTHESIZE(cocos2d::Node *, _tileNode, TileNode);

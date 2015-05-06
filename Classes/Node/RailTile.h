@@ -1,5 +1,5 @@
 //
-//  Tile.h
+//  RailTile.h
 //  RailDesigner
 //
 //  Created by giginet on 5/5/15.
@@ -13,10 +13,10 @@
 
 /** タイル用のSpriteクラスです
  */
-class Tile :public cocos2d::Sprite
+class RailTile :public cocos2d::Sprite
 {
 protected:
-    Tile();
+    RailTile();
     bool init() override;
 public:
     
@@ -29,7 +29,7 @@ public:
     };
     
     /**
-     *  TileのgridPosが正しい値かどうかをチェックします
+     *  RailTileのgridPosが正しい値かどうかをチェックします
      *  - x, yともに整数である
      *  - xが0以上2以下の値である
      *  - yが0以上の値である
@@ -50,8 +50,8 @@ public:
     CC_SYNTHESIZE(cocos2d::Vec2, _destination, Destination);
     /// タイルの種類
     CC_SYNTHESIZE_READONLY(Type, _type, Type);
-    CREATE_FUNC(Tile);
+    CREATE_FUNC(RailTile);
 };
 
 
-#endif /* defined(__RailDesigner__Tile__) */
+#endif /* defined(__RailDesigner__RailTile__) */

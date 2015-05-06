@@ -9,6 +9,8 @@
 #include "Stage.h"
 #include "define.h"
 
+USING_NS_CC;
+
 Stage::Stage()
 : _tileNode(nullptr)
 {
@@ -38,19 +40,19 @@ bool Stage::init()
     this->setTileNode(tileNode);
     this->addChild(tileNode);
     
-    for (int x = 0; x < 3; ++x) {
-        for (int y = 0; y < 10; ++y) {
-            auto tile = Tile::create();
-            tileNode->addChild(tile);
-            tile->setGridPos(cocos2d::Vec2(x, y));
-            tile->adjustPosition();
-        }
-    }
+    /*for (int x = 0; x < 3; ++x) {
+     for (int y = 0; y < 10; ++y) {
+     auto tile = RailTile::create();
+     tileNode->addChild(tile);
+     tile->setGridPos(cocos2d::Vec2(x, y));
+     tile->adjustPosition();
+     }
+     }*/
     
     return true;
 }
 
-Tile * Stage::getTileAt(int x, int y)
+RailTile * Stage::getTileAt(int x, int y)
 {
     for (auto& tile : _tiles) {
         auto gp = tile->getGridPos();
@@ -70,7 +72,7 @@ void Stage::removeTileAt(int x, int y)
     }
 }
 
-void Stage::addTile(Tile *tile)
+void Stage::addTile(RailTile *tile)
 {
     auto gp = tile->getGridPos();
     if (tile->isValid()) {
@@ -79,4 +81,25 @@ void Stage::addTile(Tile *tile)
         return;
     }
     assert("Grid point of the tile is invalid in Stage::addTile.");
+}
+
+bool Stage::isExistTile(int x, int y)
+{
+    return this->getTileAt(x, y) != nullptr;
+}
+
+cocos2d::Vec2 Stage::convertToGridSpace(cocos2d::Vec2 worldSpace)
+{
+    auto nodeSpace = this->convertToNodeSpace(worldSpace);
+    auto gridY = floorf((nodeSpace.y + TILE_HEIGHT / 2.0) / TILE_HEIGHT);
+    if (gridY >= 0) {
+        for (int x = 0; x < 3; ++x) {
+            auto boundLeft = (1 + x) * ROAD_WIDTH + x * TILE_WIDTH;
+            auto boundRight = boundLeft + TILE_WIDTH;
+            if (boundLeft <= nodeSpace.x && nodeSpace.x < boundRight) {
+                return cocos2d::Vec2(x, gridY);
+            }
+        }
+    }
+    return cocos2d::Vec2(-1, -1);
 }

@@ -1,20 +1,20 @@
 //
-//  Tile.cpp
+//  RailTile.cpp
 //  RailDesigner
 //
 //  Created by giginet on 5/5/15.
 //
 //
 
-#include "Tile.h"
+#include "RailTile.h"
 #include "define.h"
 
-Tile::Tile()
+RailTile::RailTile()
 : _type(Type::MOVABLE)
 {
 }
 
-bool Tile::init()
+bool RailTile::init()
 {
     if (!Sprite::initWithFile("tile.png")) {
         return false;
@@ -22,7 +22,7 @@ bool Tile::init()
     return true;
 }
 
-bool Tile::isValid()
+bool RailTile::isValid()
 {
     const auto& gp = _gridPos;
     return (floor(gp.x) == gp.x &&
@@ -32,7 +32,7 @@ bool Tile::isValid()
             gp.y >= 0);
 }
 
-void Tile::adjustPosition()
+void RailTile::adjustPosition()
 {
     if (this->isValid()) {
         const auto& gp = this->getGridPos();
