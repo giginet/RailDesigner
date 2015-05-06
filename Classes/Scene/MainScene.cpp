@@ -7,6 +7,7 @@
 //
 
 #include "MainScene.h"
+#include "Stage.h"
 
 USING_NS_CC;
 
@@ -23,6 +24,14 @@ bool MainScene::init()
     if (!Layer::init()) {
         return false;
     }
+    
+    auto winSize = Director::getInstance()->getWinSize();
+    //auto center = cocos2d::Vec2(winSize.width / 2.0, winSize.height / 2.0);
+    
+    auto stage = Stage::create();
+    //stage->setPosition(center);
+    this->addChild(stage);
+    
     return true;
     
 }

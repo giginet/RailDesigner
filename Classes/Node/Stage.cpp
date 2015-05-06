@@ -7,12 +7,23 @@
 //
 
 #include "Stage.h"
+#include "define.h"
 
 bool Stage::init()
 {
-    if (!Node::init()) {
+    if (!cocos2d::Node::init()) {
         return false;
     }
+    const int NUMBER_OF_ROADS = 4;
+    for (int i = 0; i < NUMBER_OF_ROADS; ++i) {
+        auto road = cocos2d::Sprite::create("road.png");
+        auto x = i * (TILE_WIDTH + ROAD_WIDTH) + ROAD_WIDTH / 2.0;
+        ;
+        road->setPosition(x, 180);
+        this->addChild(road);
+    }
+    this->setPosition(STAGE_MARGIN_X, 120);
+    
     return true;
 }
 
