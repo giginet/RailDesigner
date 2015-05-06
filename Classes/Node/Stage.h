@@ -10,15 +10,43 @@
 #define __RailDesigner__Stage__
 
 #include "cocos2d.h"
+#include "Tile.h"
+
+typedef cocos2d::Vector<Tile *> TileList;
 
 /** ゲームステージ用のノードです
-/* 画面をスクロールさせたり、特定のタイルを取り出したりします。
+ *  画面をスクロールさせたり、特定のタイルを取り出したりします。
  */
 class Stage :public cocos2d::Node
 {
+private:
+    TileList _tiles;
 protected:
     bool init() override;
 public:
+
+    /**
+     指定グリッド位置にあるタイルを取り出します
+     @param x x座標（0, 1, 2）
+     @param y y座標（自然数）
+     @return タイル、見つからなかったらnullptr
+     */
+    Tile * getTileAt(int x, int y);
+    
+    /** 
+     * 指定位置にあるタイルを取り除きます
+     * @param x x座標
+     * @param y y座標
+     */
+    void removeTileAt(int x, int y);
+    
+    /**
+     * タイルを追加します
+     * Tile#_gridPosが不正な値の場合、assertを投げます
+     * @param 追加するタイル
+     */
+    void addTile(Tile * tile);
+
     CREATE_FUNC(Stage);
 };
 
