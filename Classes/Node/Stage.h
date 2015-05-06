@@ -22,6 +22,8 @@ class Stage :public cocos2d::Node
 private:
     TileList _tiles;
 protected:
+    Stage();
+    virtual ~Stage();
     bool init() override;
 public:
 
@@ -47,6 +49,8 @@ public:
      */
     void addTile(Tile * tile);
 
+    /// タイル配置用のノード
+    CC_SYNTHESIZE(cocos2d::Node *, _tileNode, TileNode);
     CREATE_FUNC(Stage);
 };
 

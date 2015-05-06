@@ -16,7 +16,7 @@ Tile::Tile()
 
 bool Tile::init()
 {
-    if (!Sprite::init()) {
+    if (!Sprite::initWithFile("tile.png")) {
         return false;
     }
     return true;
@@ -36,7 +36,7 @@ void Tile::adjustPosition()
 {
     if (this->isValid()) {
         const auto& gp = this->getGridPos();
-        auto x = (1 + gp.x) * ROAD_WIDTH + gp.x * TILE_WIDTH;
+        auto x = ((1 + gp.x) * ROAD_WIDTH + gp.x * TILE_WIDTH) + TILE_WIDTH / 2.0;
         auto y = gp.y * TILE_HEIGHT;
         this->setPosition(x, y);
     }

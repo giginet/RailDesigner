@@ -9,6 +9,16 @@
 #include "Stage.h"
 #include "define.h"
 
+Stage::Stage()
+: _tileNode(nullptr)
+{
+}
+
+Stage::~Stage()
+{
+    CC_SAFE_RELEASE_NULL(_tileNode);
+}
+
 bool Stage::init()
 {
     if (!cocos2d::Node::init()) {
@@ -23,6 +33,19 @@ bool Stage::init()
         this->addChild(road);
     }
     this->setPosition(STAGE_MARGIN_X, 120);
+    
+    auto tileNode = cocos2d::Node::create();
+    this->setTileNode(tileNode);
+    this->addChild(tileNode);
+    
+    for (int x = 0; x < 3; ++x) {
+        for (int y = 0; y < 10; ++y) {
+            auto tile = Tile::create();
+            tileNode->addChild(tile);
+            tile->setGridPos(cocos2d::Vec2(x, y));
+            tile->adjustPosition();
+        }
+    }
     
     return true;
 }
