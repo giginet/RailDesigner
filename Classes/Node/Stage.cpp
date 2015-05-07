@@ -11,6 +11,8 @@
 
 USING_NS_CC;
 
+const int Z_ORDER_PLAYER = 10000;
+
 Stage::Stage()
 : _scroll(0)
 , _tileNode(nullptr)
@@ -29,19 +31,22 @@ bool Stage::init()
     if (!cocos2d::Node::init()) {
         return false;
     }
+    
+    auto winSize = Director::getInstance()->getWinSize();
+    
+    auto tileNode = cocos2d::Node::create();
+    this->setTileNode(tileNode);
+    this->addChild(tileNode);
+    
     const int NUMBER_OF_ROADS = 4;
     for (int i = 0; i < NUMBER_OF_ROADS; ++i) {
         auto road = cocos2d::Sprite::create("road.png");
         auto x = i * (TILE_WIDTH + ROAD_WIDTH) + ROAD_WIDTH / 2.0;
         ;
         road->setPosition(x, 180);
-        this->addChild(road);
+        _tileNode->addChild(road);
     }
     this->setPosition(STAGE_MARGIN_X, 120);
-    
-    auto tileNode = cocos2d::Node::create();
-    this->setTileNode(tileNode);
-    this->addChild(tileNode);
     
     /*for (int x = 0; x < 3; ++x) {
      for (int y = 0; y < 10; ++y) {
@@ -54,17 +59,20 @@ bool Stage::init()
     
     auto player = Player::create();
     this->setPlayer(player);
-    this->addChild(player);
+    _tileNode->addChild(player);
     
     _player->setPositionX(ROAD_WIDTH / 2.0);
+    _player->setZOrder(Z_ORDER_PLAYER);
     
     this->scheduleUpdate();
+    
     return true;
 }
 
 void Stage::update(float dt)
 {
     _scroll += 1;
+    _player->setPositionY(_scroll);
     _tileNode->setPositionY(-_scroll);
     
     // 画面外に消えたタイルを削除する
