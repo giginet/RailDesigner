@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "RailTile.h"
+#include "Player.h"
 
 typedef cocos2d::Vector<RailTile *> TileList;
 
@@ -75,6 +76,8 @@ public:
     CC_SYNTHESIZE(float, _scroll, Scroll);
     /// タイル配置用のノード
     CC_SYNTHESIZE_RETAIN(cocos2d::Node *, _tileNode, TileNode);
+    /// プレイヤー
+    CC_SYNTHESIZE_RETAIN(Player *, _player, Player);
     CREATE_FUNC(Stage);
 };
 

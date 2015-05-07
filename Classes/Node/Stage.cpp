@@ -14,12 +14,14 @@ USING_NS_CC;
 Stage::Stage()
 : _scroll(0)
 , _tileNode(nullptr)
+, _player(nullptr)
 {
 }
 
 Stage::~Stage()
 {
     CC_SAFE_RELEASE_NULL(_tileNode);
+    CC_SAFE_RELEASE_NULL(_player);
 }
 
 bool Stage::init()
@@ -49,6 +51,12 @@ bool Stage::init()
      tile->adjustPosition();
      }
      }*/
+    
+    auto player = Player::create();
+    this->setPlayer(player);
+    this->addChild(player);
+    
+    _player->setPositionX(ROAD_WIDTH / 2.0);
     
     this->scheduleUpdate();
     return true;
